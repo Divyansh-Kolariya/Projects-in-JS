@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    background-color: #111;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    height: 12vh;
+    width: 100%;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+    z-index: 10;
+}
+nav h1{
+    font-size: 1.6vw;
+}
+.nav-part2{
+    display: flex;
+    gap: 2vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+}
+.nav-part2 h4{
+    font-size: 0.73vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2.6vw;
+}
+.nav-part2 h5 {
+    margin-bottom: 1vw;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+.nav-part2 h5 span{
+    font-size: 0.77vw;
+    font-weight: 400;
+    display: inline-block;
+    transform: translateY(25px);
+    opacity: 0;
+}
+nav button{
+    background-color: #0da34e;
+    display: flex;
+    align-items: center;
+    padding: 12px 12px;
+    font-size: 0.8.5vw;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    
+}
+nav button svg{
+    height: 1vw;
+    padding-left: 0.8vw;
+}
+#nav-bottom{
+    height: 0vh;
+    width: 79%;
+    position: absolute;
+    bottom: 0%;
+    top: 90%;
+    z-index: 9;
+    border-bottom: 1px solid #fff;
+    background-color: #111;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#page1 h1{
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 6vw;
+}
+#page1 h1 .icon {
+    width: 0.8em;
+    height: 0.8em;
+    background-color: #0da34e;
+    border-radius: 50%;       
+    display: inline-flex;     
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-bottom: 0.3em;
+    margin-top: 0.1em;
+}
+#page1 h1 .icon svg {
+    width: 0.3em;  
+    height: 0.3em;
+}
+#page1 p {
+    max-width: 50%;       
+    margin: 2vh auto 0;   
+    text-align: center;   
+    font-weight: 300;     
+    font-size: 1.2vw;     
+    line-height: 1.6;     
+    color: #fff;          
+}
+#page1-something {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#page1-something h4{
+    font-weight: 300;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    padding: 9px 18px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    line-height: 1.6;
+}
+#page1-something h4:nth-last-child(2){
+    border: none;
+    padding: 2px;
+}
+#moving-div{
+    margin-top: 18vh;
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    width: 44%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+}
+#moving-div .move{
+    display: inline-block;
+    animation-name: mobe;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-div .move img{
+    height: 1.5vw;
+    margin: 0 1.2vw;
+}
+@keyframes mobe {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+#blur-left{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to left,transparent,#111);
+}
+#blur-right{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient(to right,transparent,#111);
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+}
