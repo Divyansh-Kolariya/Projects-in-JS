@@ -58,6 +58,13 @@ function navAnimation() {
         );
     });
   }
-  navAnimation();
-
-  
+  // navAnimation();
+var rightElems = document.querySelectorAll(".right-elem")
+rightElems.forEach(function(elem){
+  elem.addEventListener("mouseenter",function(){
+    
+  })
+  elem.addEventListener("mouseleave",function(){
+    
+  })
+})
