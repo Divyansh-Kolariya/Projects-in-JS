@@ -57,14 +57,30 @@ function navAnimation() {
           "-=0.2"
         );
     });
-  }
-  // navAnimation();
+}
+function page2Animation() {
 var rightElems = document.querySelectorAll(".right-elem")
 rightElems.forEach(function(elem){
-  elem.addEventListener("mouseenter",function(){
-    
-  })
-  elem.addEventListener("mouseleave",function(){
-    
-  })
+    let img = elem.querySelector("img");
+    elem.addEventListener("mouseenter",function(){
+        gsap.to(img,{
+            opacity:1,
+            scale:1
+        })
+    })
+    elem.addEventListener("mouseleave",function(){
+        gsap.to(img,{
+            opacity:0,
+            scale:0
+        })
+    })
+    elem.addEventListener("mousemove",function(dets){
+        gsap.to(img,{
+            x:dets.x - elem.getBoundingClientRect().x-50,
+            y:dets.y - elem.getBoundingClientRect().y-100
+        })
+    })
 })
+}
+// navAnimation();
+// page2Animation();

@@ -204,7 +204,7 @@ nav button svg{
     justify-content: space-between;
     flex-direction: column;
     padding-bottom: 13vw;
-    padding-top: 3vw;
+    padding-top: 3vw ;
 }
 #page2-left p{
     font-size: 1vw;
@@ -235,4 +235,50 @@ nav button svg{
     object-fit: cover;
     position: absolute;
     opacity: 0;
+    scale: 0;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    position: relative;
+    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page3-center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1vw;
+}
+.page3-center .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.page3-center .icon i{
+    color: #000;
+    font-size: 2.8vw;
+}
+.page3-center h5 {
+    font-size: 0.8vw;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50px;
+    padding: 12px 26px 10px 26px;
+    margin-top: 0.5vw;
+    font-weight: 700;
+    opacity: 0;
+    transition: all ease 0.5s;
+    transform: translateY(16%);
+    text-transform: uppercase;
+}
+.page3-center:hover h5{
+    opacity: 1;
 }
