@@ -68,14 +68,14 @@ nav button svg{
     padding-left: 0.8vw;
 }
 #nav-bottom{
-    height: 0vh;
+    height: 1.20vh;
     width: 79%;
     position: absolute;
-    bottom: 0%;
     top: 90%;
     z-index: 9;
     border-bottom: 1px solid #fff;
     background-color: #111;
+    bottom: 0%;
 }
 
 #page1{
@@ -281,4 +281,127 @@ nav button svg{
 }
 .page3-center:hover h5{
     opacity: 1;
+    transform: translateY(8%);
+}
+#page3 video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    transform: scaleX(0.7) scaleY(0);
+    border-radius: 30px;
+    opacity: 0;
+    z-index: 9999;
+}
+#page4{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    padding: 0vw 10.5vw;
+    padding-bottom: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+}
+.page4-left{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 5vw;
+    padding-top: 3vw ;
+}
+.page4-left h2{
+    width: 75%;
+    font-size: 2.9vw;
+    color: #111;
+    margin-top: 7%;
+}
+#page4-right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 5vw;
+    padding-top: 3vw ;
+}
+.right-top .h1{
+    color: #b8b8b8;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+.right-top p{
+    color: #111;
+    font-size: 20px;
+    font-weight: 545;
+}
+.right-bottom .h2{
+    color: #b8b8b8;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+.right-bottom p{
+    color: #111;
+    font-size: 20px;
+    font-weight: 545;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    border-color: #fff;
+    position: relative;
+    padding-bottom: 13vh;
+}
+.section{
+    width: 100%;
+    height: 72vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13vh 10vw;
+    padding-bottom: 0;
+}
+.sec-left{
+    height: 100%;
+    width: 25%;
+    border-top: 2px solid #000;
+    padding-top: 3vh;
+}
+.sec-left h2{
+    font-size: 2.1vw;
+    font-weight: 500;
+    color: #000;
+}
+.sec-left p{
+    color: #000;
+    margin-top: 10vh;
+    font-size: 1.2vw;
+}
+.sec-right{
+    height: 100%;
+    width: 70%;
+    position: relative;
+    background-color: blanchedalmond;
+}
+.sec-right img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.sec-right video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0;
 }

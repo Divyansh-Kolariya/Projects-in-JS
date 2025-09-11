@@ -82,5 +82,50 @@ rightElems.forEach(function(elem){
     })
 })
 }
+function page3Animation() {
+  var page3Center = document.querySelector(".page3-center");
+  var video = document.querySelector("#page3 video");
+  var isPlaying = false;
+
+  page3Center.addEventListener("click", function () {
+      if (!isPlaying) {
+          video.play();
+          gsap.to(video, {
+              scaleX: 1,
+              scaleY: 1,
+              opacity: 1,
+              borderRadius: 0,
+              duration: 0.5,
+              onComplete: () => { isPlaying = true; }
+          });
+      }
+  });
+
+  video.addEventListener("click", function (e) {
+      e.stopPropagation(); 
+      if (isPlaying) {
+          video.pause();
+          gsap.to(video, {
+              scaleX: 0.7,
+              scaleY: 0,
+              opacity: 0,
+              borderRadius: "30px",
+              duration: 0.5,
+              onComplete: () => { isPlaying = false; }
+          });
+      }
+  });
+}
+
+var sections = document.querySelectorAll(".section")
+sections.forEach(function(elem){
+    
+})
+
+
+
+
+
 // navAnimation();
 // page2Animation();
+// page3Animation();
