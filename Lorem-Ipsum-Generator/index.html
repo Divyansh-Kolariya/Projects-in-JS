@@ -16,8 +16,41 @@
                 <label>Paragraphs:
                     <input type="range" id="paragraphs" min="1" max="50" value="1">
                 </label>
+                <span id="paragraphsValue">1</span>
+            </div>
+            <div class="words">
+                <label for="words">
+                    Words per Paragraph:
+                </label>
+                <input type="range" 
+                       id="words" 
+                       min="1" 
+                       max="100" 
+                       value="10">
+                <span id="wordsValue">
+                    10
+                </span>
+            </div>
+            <div class="tags">
+                <label for="tags">
+                    Tag:
+                </label>
+                <select id="tags">
+                </select>
+            </div>
+            <div class="include">
+                <label for="include">Include HTML: </label>
+                <select id="include">
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+                <button id="generate">Generate Lorem Ipsum</button>
             </div>
         </div>
+        <div class="output">
+
+        </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
