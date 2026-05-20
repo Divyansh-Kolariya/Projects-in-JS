@@ -1,6 +1,6 @@
 I am creating this project for my self learning.
 
-About Project -> In this article, we are going to implement a Lorem Ipsum Generator Application through HTML, CSS, and JavaScript. Lorem Ipsum, a placeholder text commonly utilized in the printing and typesetting industry, serves to visually represent a document's layout instead of relying on meaningful content.
+About Project -> In this Project, I am going to implement a Lorem Ipsum Generator Application through HTML, CSS, and JavaScript. Lorem Ipsum, a placeholder text commonly utilized in the printing and typesetting industry, serves to visually represent a document's layout instead of relying on meaningful content.
 
 Approach ->
 In this approach, various methods and functions are utilized to achieve the desired functionalities, which are described below:
