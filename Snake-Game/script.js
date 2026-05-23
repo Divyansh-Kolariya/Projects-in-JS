@@ -7,7 +7,7 @@ const blocks = [];
 const snake = [ { row: 1, col: 2 }, { row: 1, col: 3 } ];
 let direction = 'down';
 let intervalId = null;
-
+let food = { row: Math.floor(Math.random() * rows), col: Math.floor(Math.random() * cols)}
 // Tell the grid how many columns/rows
 board.style.setProperty('--cols', cols);
 board.style.setProperty('--rows', rows);
@@ -22,13 +22,9 @@ for (let row = 0; row < rows; row++) {
 }
 
 function render(){
-    snake.forEach( gogo => {
-        blocks[ `${gogo.row}-${gogo.col}`].classList.add("fill")
-    })
-}
-
-intervalId = setInterval(() => {
     let head = null
+
+    blocks[ `${food.row}-${food.col}`].classList.add("food")
 
     if(direction === 'left'){
         head = { row: snake[0].row, col: snake[0].col-1 }
@@ -45,6 +41,14 @@ intervalId = setInterval(() => {
         clearInterval(intervalId)
     }
 
+    if(head.row == food.row && head.col == food.col) {
+        blocks[ `${food.row}-${food.col}`].classList.remove("food")
+        food = { row: Math.floor(Math.random() * rows), col: Math.floor(Math.random() * cols)}
+        blocks[ `${food.row}-${food.col}`].classList.add("food")
+
+        snake.unshift(head)
+    }
+
     snake.forEach( gogo => {
         blocks[ `${gogo.row}-${gogo.col}`].classList.remove("fill")
     })
@@ -52,6 +56,12 @@ intervalId = setInterval(() => {
     snake.unshift(head)
     snake.pop()
 
+    snake.forEach( gogo => {
+        blocks[ `${gogo.row}-${gogo.col}`].classList.add("fill")
+    })
+}
+
+intervalId = setInterval(() => {
 
     render()
 }, 400)

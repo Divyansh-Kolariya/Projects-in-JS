@@ -13,6 +13,7 @@ body{
     /* Colors */
     --bg-primary-color: rgb(7, 7, 7);
     --bg-fill-color: #fdfdfc;
+    --bg-food-color: red;
 
     /* Text Colors */
     --text-primary-color: rgb(250, 246, 246);
@@ -84,4 +85,8 @@ section{
 
 .fill {
     background-color: var(--bg-fill-color);
+}
+
+.food {
+    background-color: var(--bg-food-color);
 }
