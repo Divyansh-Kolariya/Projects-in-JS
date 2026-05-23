@@ -111,12 +111,20 @@ section{
     background-color: #3d3d3d85;
     backdrop-filter: blur(4px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--space-lg);
 }
 
 .start-game{
     display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+}
+.game-over{
+    display: none;
     flex-direction: column;
     gap: var(--space-lg);
     align-items: center;

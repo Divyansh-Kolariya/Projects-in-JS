@@ -6,6 +6,8 @@ const blocks = [];
 const snake = [ { row: 1, col: 2 }, { row: 1, col: 3 } ];
 const startButton = document.querySelector(".btn-start")
 const model = document.querySelector(".model")
+const startGameModel = document.querySelector(".start-game")
+const gameOverModel = document.querySelector(".game-over")
 
 let direction = 'down';
 let intervalId = null;
@@ -71,6 +73,9 @@ startButton.addEventListener("click", () => {
     intervalId = setInterval(() => {render() }, 300)
 })
 
+function resetGame(){
+    
+}
 
 
 addEventListener("keydown", (event) => {
