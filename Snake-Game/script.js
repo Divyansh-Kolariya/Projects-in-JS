@@ -5,7 +5,8 @@ const rows = Math.floor(board.clientHeight / blockSize);
 
 const blocks = [];
 const snake = [ { row: 1, col: 2 }, { row: 1, col: 3 } ];
-let direction = 'down'
+let direction = 'down';
+let intervalId = null;
 
 // Tell the grid how many columns/rows
 board.style.setProperty('--cols', cols);
@@ -26,7 +27,7 @@ function render(){
     })
 }
 
-setInterval(() => {
+intervalId = setInterval(() => {
     let head = null
 
     if(direction === 'left'){
@@ -37,6 +38,11 @@ setInterval(() => {
         head = { row: snake[0].row+1, col: snake[0].col }
     }else if(direction === 'up'){
         head = { row: snake[0].row-1, col: snake[0].col }
+    }
+
+    if(head.row < 0 || head.row >= rows || head.col < 0 || head.col >= cols){
+        alert("Game Over")
+        clearInterval(intervalId)
     }
 
     snake.forEach( gogo => {
