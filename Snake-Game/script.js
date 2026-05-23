@@ -2,12 +2,16 @@ const board = document.querySelector('.board');
 const blockSize = 50;
 const cols = Math.floor(board.clientWidth / blockSize);
 const rows = Math.floor(board.clientHeight / blockSize);
-
 const blocks = [];
 const snake = [ { row: 1, col: 2 }, { row: 1, col: 3 } ];
+const startButton = document.querySelector(".btn-start")
+
 let direction = 'down';
 let intervalId = null;
 let food = { row: Math.floor(Math.random() * rows), col: Math.floor(Math.random() * cols)}
+
+
+
 // Tell the grid how many columns/rows
 board.style.setProperty('--cols', cols);
 board.style.setProperty('--rows', rows);
@@ -61,10 +65,10 @@ function render(){
     })
 }
 
-intervalId = setInterval(() => {
+startButton.addEventListener("click", () => {
+    intervalId = setInterval(() => {render() }, 300)
+})
 
-    render()
-}, 400)
 
 
 addEventListener("keydown", (event) => {
