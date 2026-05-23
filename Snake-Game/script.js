@@ -5,6 +5,7 @@ const rows = Math.floor(board.clientHeight / blockSize);
 const blocks = [];
 const snake = [ { row: 1, col: 2 }, { row: 1, col: 3 } ];
 const startButton = document.querySelector(".btn-start")
+const model = document.querySelector(".model")
 
 let direction = 'down';
 let intervalId = null;
@@ -66,6 +67,7 @@ function render(){
 }
 
 startButton.addEventListener("click", () => {
+    model.style.display = 'none'
     intervalId = setInterval(() => {render() }, 300)
 })
 
