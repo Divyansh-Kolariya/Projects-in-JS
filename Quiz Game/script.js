@@ -74,11 +74,12 @@ restartButton.addEventListener("click", restartQuiz);
 function startQuiz(){
     currentQuestionIndex = 0;
     scoreSpan.textContent = 0;
+    score = 0;
     
     startScreen.classList.remove("active");
     quizScreen.classList.add("active");
 
-    showQuestion()
+    showQuestion();
     
 }
 
@@ -116,7 +117,7 @@ function selectAns (event) {
   Array.from(answers.children).forEach((button) => {
     if (button.dataset.correct === "true") {
       button.classList.add("correct");
-    } else {
+    } else if(button === selectButton){
       button.classList.add("incorrect");
     }
   });
