@@ -5,10 +5,10 @@ The Projects in this repo is created by using HTML, CSS and JAVASCRIPT. These Pr
 
 
 ## List of Projects
-1. [Snake Game](./snake-game)
-2. [Quiz Game](./quiz-game)
-3. [Lorem Ipsum Generator](./lorem-ipsum-generator)
-
+1. [Snake Game]
+2. [Quiz Game]
+3. [Lorem Ipsum Generator]
+4. [Color Palette Generator]
 
 
 
