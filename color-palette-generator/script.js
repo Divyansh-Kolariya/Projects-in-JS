@@ -1,6 +1,5 @@
 const generateBtn = document.getElementById("generate-btn");
 const paletteContainer = document.querySelector(".palette-container");
-const copyBtn = document.querySelector(".copy-btn");
 
 
 generateBtn.addEventListener("click", generatePalette);
@@ -9,22 +8,29 @@ paletteContainer.addEventListener("click", function(e){
     if(e.target.classList.contains("copy-btn")){
         const hexValue = e.target.previousElementSibling.textContent;
 
-        navigator.clipboard.writeText(hexValue)
-        .then(() => showCopySuccess())
-        .catch((err) => console.log(err))
-    } 
-})
+        navigator.clipboard
+            .writeText(hexValue)
+            .then(() => showCopySuccess(e.target))
+            .catch((err) => console.log(err))
+    } else if(e.target.classList.contains("color")){
+        const hexValue = e.target.nextElementSibling.querySelector(".hex-value").textContent;
+        navigator.clipboard
+            .writeText(hexValue)
+            .then(() => showCopySuccess(e.target.nextElementSibling.querySelector(".copy-btn")))
+            .catch((err) => console.log(err))
+    }
+});
 
-function showCopySuccess() {
-    copyBtn.classList.remove("far", "fa-copy");
-    copyBtn.classList.add("fas", "fa-check");
+function showCopySuccess(element) {
+    element.classList.remove("far", "fa-copy");
+    element.classList.add("fas", "fa-check");
 
-    copyBtn.style.color = '#48bb78';
+    element.style.color = '#48bb78';
 
     setTimeout(() => {
-        copyBtn.classList.remove("fas", "fa-check");
-        copyBtn.classList.add("far", "fa-copy");
-        copyBtn.style.color = ""
+        element.classList.remove("fas", "fa-check");
+        element.classList.add("far", "fa-copy");
+        element.style.color = ""
     },1500)
 }
 
